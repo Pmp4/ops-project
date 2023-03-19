@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          ㅁㅁㅁ
+          충돌해결
         </a>
       </header>
     </div>
