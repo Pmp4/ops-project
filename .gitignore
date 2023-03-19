@@ -46,6 +46,8 @@ out/
 # FO
 ### dependencies
 node_modules
+.pnp
+.pnp.js
 front-office/ops/package-lock.json
 
 ### testing
