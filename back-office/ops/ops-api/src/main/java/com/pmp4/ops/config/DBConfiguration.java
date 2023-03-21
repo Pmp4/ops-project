@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @Configuration
-@PropertySource("classpath:/application.properties")
+@PropertySource("classpath:/application-db.properties")
 @EnableTransactionManagement
 public class DBConfiguration {
     @Bean
