@@ -73,3 +73,9 @@ project(':ops-api') {
 		implementation project(':ops-core')
 	}
 }
+
+project(":ops-swagger") {
+	dependencies {
+		implementation project(":ops-api")
+	}
+}

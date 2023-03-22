@@ -1,4 +1,4 @@
-package com.pmp4.ops.config;
+package com.pmp4.ops.core.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

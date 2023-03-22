@@ -1,4 +1,4 @@
-package com.pmp4.ops.config;
+package com.pmp4.ops.swagger.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -9,4 +9,5 @@ rootProject.name = 'ops'
 include 'ops-api'
 include 'ops-admin'
 include 'ops-core'
+include 'ops-swagger'
 
