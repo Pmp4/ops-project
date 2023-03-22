@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @RequestMapping("/test")
 public class MainApiController {
@@ -14,8 +16,7 @@ public class MainApiController {
 
     @ApiOperation(value = "TEST API", notes = "테스트 API 실행")
     @GetMapping("/test")
-    public String test() {
-        LOGGER.info("[test] ===================");
+    public String test(HttpServletRequest httpServletRequest) {
         return "test";
     }
 }
