@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { test } from 'api/service/MemberService';
 
 function App() {
+  useEffect(() => {
+    console.log(test());
+  })
+
   return (
     <div className="App">
       <header className="App-header">
