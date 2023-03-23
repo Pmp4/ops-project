@@ -1,31 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
-import { test } from 'api/service/MemberService';
+import "scss/app.scss"
+import Header from 'components/layout/Header';
+import Contents from 'components/layout/Contents';
+import Footer from 'components/layout/Footer';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
-  useEffect(() => {
-    console.log(test());
-  })
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          충돌해결
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div id="wrap" className="App">
+            <BrowserRouter>
+                <Header/>
+                <Contents/>
+                <Footer/>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
