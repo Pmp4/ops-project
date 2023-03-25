@@ -55,14 +55,22 @@ const Header = () => {
                     <button type="button" className="mode-btn func-btn br-m">
                         <FontAwesomeIcon icon={faCircleHalfStroke} />
                     </button>
-                    <div className="search-part flex-wrap">
-                        <div className='search-input'>
+                    <div className="search-part">
+                        <div className='search-input flex-wrap'>
                             <input />
+                            <button type="button" className="search-btn func-btn br-m">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </button>
                         </div>
-                        <button type="button" className="search-btn func-btn br-m">
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                        
+                        <div className='search-list-part'>
+                            <div className='blank'></div>
+                            <ul className='search-list box-md'>
+                                <li>테스트입니다.</li>
+                                <li>검색어임</li>
+                                <li>입니다람쥐</li>
+                                <li>리액트로 프로젝트</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

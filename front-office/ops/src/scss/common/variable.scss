@@ -39,3 +39,20 @@ $md-font: 1.2em;
 $gray-color: #F1F1F2;
 $black-color: #2C2C2C;
 $white-color: #ffffff;
+
+
+
+
+/** line-height 보정 단위, "position:relative" 필요 */
+$line-cor: -1px;
+
+
+
+
+
+
+
+
+
+/** z-index 정의 */
+$header-index: 999;
