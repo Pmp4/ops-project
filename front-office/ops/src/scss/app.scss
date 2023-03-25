@@ -63,6 +63,24 @@ button {
 	overflow: visible;
 	cursor: pointer
 }
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 // CSS Reset
 
 
@@ -100,14 +118,31 @@ body {
 }
 
 // box 정의
-.box {
+.box-lg {
     border-radius: $box-border-radius-lg;
     padding: $box-padding-lg;
 }
+.box-md {
+    border-radius: $box-border-radius-md;
+    padding: $box-padding-md;
+}
+.box-sm {
+    border-radius: $box-border-radius-sm;
+    padding: $box-padding-sm;
+}
+
+
 
 // border-radius 정의
 .br-lg {border-radius: $box-border-radius-lg;}
 .br-md {border-radius: $box-border-radius-md;}
+
+
+// font size 정의
+.xl-font {font-size: $xl-font;}
+.lg-font {font-size: $lg-font;}
+.md-font {font-size: $md-font;}
+
 
 
 img {

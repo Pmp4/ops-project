@@ -15,21 +15,18 @@
         }
 
         .menu {
-            font-size: 1.2em;
             ul {
                 height: 100%;
-                border-radius: $box-border-radius-md;
                 background: $gray-color;
-                padding: $box-padding-md;
                 overflow: hidden;
                 box-sizing: border-box;
 
                 li {
                     margin-left: 20px;
-                    border-radius: $box-border-radius-md;
+                    border-radius: $box-border-radius-sm;
                     overflow: hidden;
-                    transition: .2s;
-                    a{transition: .2s;}
+                    transition: $fast-transition;
+                    a{transition: $fast-transition;}
 
                     &:nth-child(1) {margin-left: 0;}
                     &.on {
@@ -51,14 +48,36 @@
 
 
         .func {
-            .setting-btn {
+            svg {
+                color: $black-color;
+                transition: $fast-transition;
+            }
+            .func-btn {
                 display: block;
-                border-radius: $box-border-radius-md;
-                padding: $box-padding-md;
-                color: #707777;
-                background: #C4CCCC;
                 height: 100%;
                 line-height: 100%;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                font-size: 1.3em;
+                transition: $fast-transition;
+                &:hover{
+                    svg {color: #b1b1b1;}
+                }
+            }
+
+            .mode-btn {
+
+            }
+
+
+            .search-part {
+                margin-left: 15px;
+            }
+
+            .search-btn {
+                cursor: pointer;
+                margin-left: 10px;
             }
         }
     }

@@ -12,17 +12,27 @@ $box-border-radius-xxl: 22px;
 $box-border-radius-xl: 18px;
 $box-border-radius-lg: 14px;
 $box-border-radius-md: 10px;
+$box-border-radius-sm: 6px;
 
 // Padding
+// $box-padding-xl: 10px 25px;
 $box-padding-lg: 10px 25px;
-$box-padding-md: 4px 6px;
+$box-padding-md: 6px 10px;
+$box-padding-sm: 4px 6px;
 
 
+
+
+// transition 정의
+$fast-transition: .2s;
 
 
 
 /** 폰트 사이즈 */
-$big-title: 2em;
+$xl-font: 2em;
+$lg-font: 1.5em;
+$md-font: 1.2em;
+
 
 
 /** Color */

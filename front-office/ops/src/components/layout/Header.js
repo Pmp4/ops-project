@@ -1,4 +1,4 @@
-import { faGear, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleHalfStroke, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from "img/logo.svg";
 import React, { useEffect } from "react";
@@ -8,20 +8,18 @@ const Header = () => {
     const location = useLocation();
 
     useEffect(() => {
-        console.log(location.pathname.split("/"))
-        console.log(location.pathname)
     }, [location]);
 
     return (
-        <div id="header" className="box">
+        <div id="header" className="box-lg">
             <div className="header-wrap flex-wrap">
                 <div className="logo">
                     <Link to="/">
                         <img src={Logo} alt="logo" />
                     </Link>
                 </div>
-                <div className="menu">
-                    <ul className="flex-wrap br-m">
+                <div className="menu md-font">
+                    <ul className="flex-wrap box-md">
                         <li className={location.pathname === "/" ? "on" : ""}>
                             <Link to="/">
                                 {/* <FontAwesomeIcon icon={faHouse} /> */}홈
@@ -29,7 +27,9 @@ const Header = () => {
                         </li>
                         <li
                             className={
-                                location.pathname.split("/")[1] === "social" ? "on" : ""
+                                location.pathname.split("/")[1] === "social"
+                                    ? "on"
+                                    : ""
                             }
                         >
                             <Link to="/social">
@@ -39,7 +39,9 @@ const Header = () => {
                         </li>
                         <li
                             className={
-                                location.pathname.split("/")[1] === "blog" ? "on" : ""
+                                location.pathname.split("/")[1] === "blog"
+                                    ? "on"
+                                    : ""
                             }
                         >
                             <Link to="/blog">
@@ -50,13 +52,17 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="func flex-wrap">
-                    <button type="button" className="setting-btn">
-                        <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>
+                    <button type="button" className="mode-btn func-btn br-m">
+                        <FontAwesomeIcon icon={faCircleHalfStroke} />
                     </button>
-                    <div className='search-wrap'>
-                        <div className='search-btn'>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <div className="search-part flex-wrap">
+                        <div className='search-input'>
+                            <input />
                         </div>
+                        <button type="button" className="search-btn func-btn br-m">
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </button>
+                        
                     </div>
                 </div>
             </div>
