@@ -2,5 +2,53 @@
 @import "./variable.scss";
 
 & {
-    background: red;
+    height: 60px;
+    box-sizing: border-box;
+    background: #fff;
+
+    .header-wrap {
+        height: 100%;
+
+        .logo {
+            height: 100%;
+            img {
+                height: 100%;
+            }
+        }
+
+        .menu {
+            font-size: 1.2em;
+            ul {
+                height: 100%;
+                border-radius: $box-border-radius-md;
+                background: $gray-color;
+                overflow: hidden;
+                padding: $box-padding-md;
+                box-sizing: border-box;
+
+                li {
+                    margin-left: 20px;
+                    border-radius: $box-border-radius-md;
+                    overflow: hidden;
+                    transition: .2s;
+                    a{transition: .2s;}
+
+                    &:nth-child(1) {margin-left: 0;}
+                    &.on {
+                        background-color: $black-color;
+                        a {color: #fff;}
+                    }
+                    
+                    a {
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                        padding: 0 14px;
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+    }
 }

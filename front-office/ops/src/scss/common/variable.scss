@@ -1,4 +1,4 @@
-// 반응형 사이즈 규격
+/** 반응형 사이즈 규격 */
 $device-xxl-width: 1600px;
 $device-xl-width: 1280px;
 $device-lg-width: 1024px;
@@ -6,5 +6,25 @@ $device-md-width: 768px;
 $device-sm-width: 576px;
 
 
-// 폰트 사이즈
+/** box 사이즈 */
+// Border-radius
+$box-border-radius-xxl: 22px;
+$box-border-radius-xl: 18px;
+$box-border-radius-lg: 14px;
+$box-border-radius-md: 10px;
+
+// Padding
+$box-padding-lg: 10px 25px;
+$box-padding-md: 4px 6px;
+
+
+
+
+
+/** 폰트 사이즈 */
 $big-title: 2em;
+
+
+/** Color */
+$gray-color: #F1F1F2;
+$black-color: #2C2C2C;

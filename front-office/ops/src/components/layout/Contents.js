@@ -5,7 +5,7 @@ import NotFound from './NotFound';
 
 const Contents = () => {
     return (
-        <div id='contents'>
+        <div id='contents' className='box'>
             <Routes>
                 <Route path='/' element={<Main/>}></Route>
                 <Route path='*' element={<NotFound/>}></Route>
