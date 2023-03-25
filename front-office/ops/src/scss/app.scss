@@ -54,6 +54,15 @@ a {
     text-decoration: none;
     &:active {color: $black-color}
 }
+button {
+	background: inherit;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	padding: 0;
+	overflow: visible;
+	cursor: pointer
+}
 // CSS Reset
 
 
@@ -64,6 +73,11 @@ body {
     background-color: $gray-color;
 	font-family: 'Noto Sans KR', sans-serif;
 	color: $black-color;
+
+	&.dark-mode {
+		background-color: $black-color;
+		color: $white-color;
+	}
 }
 
 #wrap {
@@ -90,6 +104,11 @@ body {
     border-radius: $box-border-radius-lg;
     padding: $box-padding-lg;
 }
+
+// border-radius 정의
+.br-lg {border-radius: $box-border-radius-lg;}
+.br-md {border-radius: $box-border-radius-md;}
+
 
 img {
 	width: 100%;

@@ -4,16 +4,14 @@
 & {
     height: 60px;
     box-sizing: border-box;
-    background: #fff;
+    background: $white-color;
 
     .header-wrap {
         height: 100%;
 
         .logo {
             height: 100%;
-            img {
-                height: 100%;
-            }
+            img {height: 100%;}
         }
 
         .menu {
@@ -22,8 +20,8 @@
                 height: 100%;
                 border-radius: $box-border-radius-md;
                 background: $gray-color;
-                overflow: hidden;
                 padding: $box-padding-md;
+                overflow: hidden;
                 box-sizing: border-box;
 
                 li {
@@ -36,7 +34,7 @@
                     &:nth-child(1) {margin-left: 0;}
                     &.on {
                         background-color: $black-color;
-                        a {color: #fff;}
+                        a {color: $white-color;}
                     }
                     
                     a {
@@ -48,6 +46,19 @@
                         top: -1px;
                     }
                 }
+            }
+        }
+
+
+        .func {
+            .setting-btn {
+                display: block;
+                border-radius: $box-border-radius-md;
+                padding: $box-padding-md;
+                color: #707777;
+                background: #C4CCCC;
+                height: 100%;
+                line-height: 100%;
             }
         }
     }
