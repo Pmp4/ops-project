@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const Search = () => {
+const Search = ({ parent }) => {
+    const [searchState, setSearchState] = useState(false);
+
+    useEffect(() => {
+        if (parent !== "HEADER") {
+            setSearchState(true);
+        }
+    }, []);
+
+    useEffect(() => {
+        console.log(parent);
+    }, [parent]);
+
+    const onClickSearchEvent = useCallback((bool) => {
+        if (parent === "HEADER") {
+            setSearchState(bool);
+        }
+    });
+
     return (
         <div id="search">
-            <div className="search-part">
-                <div className="search-input flex-wrap">
+            <div
+                className={searchState ? "search-part on" : "search-part"}
+                onMouseOver={() => onClickSearchEvent(true)}
+                onMouseOut={() => onClickSearchEvent(false)}
+            >
+                <div
+                    className={
+                        searchState
+                            ? "search-input flex-wrap on"
+                            : "search-input flex-wrap"
+                    }
+                >
                     <input />
                     <button type="button" className="search-btn func-btn br-m">
                         <FontAwesomeIcon icon={faMagnifyingGlass} />

@@ -9,6 +9,7 @@ const Header = () => {
     const location = useLocation();
 
     useEffect(() => {
+
     }, [location]);
 
     return (
@@ -56,7 +57,7 @@ const Header = () => {
                     <button type="button" className="mode-btn func-btn br-m">
                         <FontAwesomeIcon icon={faCircleHalfStroke} />
                     </button>
-                    <Search/>
+                    <Search parent={"HEADER"}/>
                 </div>
             </div>
         </div>
