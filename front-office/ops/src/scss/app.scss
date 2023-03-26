@@ -152,6 +152,18 @@ img {
 
 
 
+/** 부가 component*/
+#search {
+	@import "./components/search.scss";
+}
+
+
+
+
+
+
+
+/** 대표 component*/
 #header {
     @import "./common/header.scss";
 }
