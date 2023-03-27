@@ -9,11 +9,8 @@ const Search = ({ parent }) => {
         if (parent !== "HEADER") {
             setSearchState(true);
         }
-    }, []);
-
-    useEffect(() => {
-        console.log(parent);
     }, [parent]);
+
 
     const onClickSearchEvent = useCallback((bool) => {
         if (parent === "HEADER") {

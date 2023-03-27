@@ -1,4 +1,4 @@
-import { faCircleHalfStroke, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Search from 'components/search/Search';
 import Logo from "img/logo.svg";
@@ -58,6 +58,9 @@ const Header = () => {
                         <FontAwesomeIcon icon={faCircleHalfStroke} />
                     </button>
                     <Search parent={"HEADER"}/>
+                    <button type="button" className="user-btn func-btn br-m box-md">
+                        로그인
+                    </button>
                 </div>
             </div>
         </div>

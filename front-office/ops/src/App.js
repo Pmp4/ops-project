@@ -3,15 +3,24 @@ import Header from 'components/layout/Header';
 import Contents from 'components/layout/Contents';
 import Footer from 'components/layout/Footer';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import rootReducer from 'reducer/rootReducer';
+import Modal from 'components/modal/Modal';
+import { createStore } from 'redux';
 
 function App() {
+    const store = createStore(rootReducer);
+
     return (
         <div id="wrap" className="App">
-            <BrowserRouter>
-                <Header/>
-                <Contents/>
-                <Footer/>
-            </BrowserRouter>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Modal/>
+                    <Header/>
+                    <Contents/>
+                    <Footer/>
+                </BrowserRouter>
+            </Provider>
         </div>
     );
 }
