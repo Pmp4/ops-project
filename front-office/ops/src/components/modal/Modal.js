@@ -6,7 +6,7 @@ const Modal = () => {
     const modal = useSelector(state => state.modal);
 
     useEffect(() => {
-        console.log(modal);
+        
     })
 
     return (
