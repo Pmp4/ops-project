@@ -13,16 +13,17 @@ const Header = () => {
     }, [location]);
 
     return (
-        <div id="header" className="box-lg">
-            <div className="header-wrap flex-wrap">
+        <div id="header">
+            <div className="header-wrap clearfix">
                 <div className="logo">
                     <Link to="/">
                         <img src={Logo} alt="logo" />
                     </Link>
                 </div>
                 <div className="menu md-font">
-                    <ul className="flex-wrap box-md">
+                    <ul className="flex-wrap">
                         <li className={location.pathname === "/" ? "on" : ""}>
+                            <div className='on-action'></div>
                             <Link to="/">
                                 {/* <FontAwesomeIcon icon={faHouse} /> */}홈
                             </Link>
@@ -34,6 +35,7 @@ const Header = () => {
                                     : ""
                             }
                         >
+                            <div className='on-action'></div>
                             <Link to="/social">
                                 {/* <FontAwesomeIcon icon={faHouse} /> */}
                                 소셜
@@ -46,6 +48,7 @@ const Header = () => {
                                     : ""
                             }
                         >
+                            <div className='on-action'></div>
                             <Link to="/blog">
                                 {/* <FontAwesomeIcon icon={faHouse} /> */}
                                 블로그

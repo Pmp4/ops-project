@@ -7,9 +7,14 @@ import { Provider } from 'react-redux';
 import rootReducer from 'reducer/rootReducer';
 import Modal from 'components/modal/Modal';
 import { createStore } from 'redux';
+import { useEffect } from 'react';
 
 function App() {
     const store = createStore(rootReducer);
+
+    useEffect(() => {
+        console.log("debug");
+    }, []);
 
     return (
         <div id="wrap" className="App">
