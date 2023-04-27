@@ -1,12 +1,13 @@
-import { faCircleHalfStroke, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faCircleHalfStroke, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Search from 'components/search/Search';
 import Logo from "img/logo.svg";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
     const location = useLocation();
+    const [test, setTest] = useState(false);
 
     useEffect(() => {
 
@@ -55,13 +56,20 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="func flex-wrap">
-                    <button type="button" className="mode-btn func-btn br-m">
-                        <FontAwesomeIcon icon={faCircleHalfStroke} />
-                    </button>
-                    <button type="button" className="search-btn func-btn br-m">
+                    <button 
+                        type="button" 
+                        className={test ? "search-btn btn-s-black on" : "search-btn btn-s-black"}
+                        onClick={() => setTest(!test)}
+                    >
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
-                    <button type="button" className="user-btn func-btn br-m box-md">
+                    <button type="button" className="mode-btn btn-s-none">
+                        <FontAwesomeIcon icon={faCircleHalfStroke} />
+                    </button>
+                    <button type="button" className="alarm-btn btn-s-none">
+                        <FontAwesomeIcon icon={faBell} />
+                    </button>
+                    <button type="button" className="user-btn btn-s-none">
                         로그인
                     </button>
                 </div>

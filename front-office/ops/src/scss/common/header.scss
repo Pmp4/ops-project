@@ -29,7 +29,45 @@
 
         /* 오른쪽 사이드 부분 시작 */
         .func {
+            @keyframes bounce {
+                0%{
+                    transform: scale(100%);
+                }
+                50%{
+                    transform: scale(90%);
+                }
+                100%{
+                    transform: scale(100%);
+                }
+            }
             float: right;
+
+            .btn-s-none {
+                border-radius: 12px;
+                height: 40px;
+                padding: 0 12px;
+                background: none;
+
+                font-size: 1em;
+            }
+
+            .btn-s-black {
+                border-radius: 12px;
+                height: 40px;
+                padding: 0 12px;
+                background-color: $black-color;
+                color: $white-color;
+                transition: .2s;
+
+                font-size: 1em;
+
+
+                &.on {
+                    animation: bounce .3s forwards;
+                    transition-delay: .3s;
+                    left: -200px;
+                }
+            }
         }
         /* 오른쪽 사이드 부분 끝 */
 
@@ -66,7 +104,7 @@
                     }
 
 
-                    /*메뉴 action 활성화 시*/
+                    /* 메뉴 action 활성화 시 */
                     &.on {
                         a {
                             color: $white-color;
