@@ -23,9 +23,9 @@ const Header = () => {
                 <div className="menu md-font">
                     <ul className="flex-wrap">
                         <li className={location.pathname === "/" ? "on" : ""}>
-                            <div className='on-action'></div>
                             <Link to="/">
-                                {/* <FontAwesomeIcon icon={faHouse} /> */}홈
+                                {/* <FontAwesomeIcon icon={faHouse} /> */}
+                                <span>홈</span>
                             </Link>
                         </li>
                         <li
@@ -35,10 +35,9 @@ const Header = () => {
                                     : ""
                             }
                         >
-                            <div className='on-action'></div>
                             <Link to="/social">
                                 {/* <FontAwesomeIcon icon={faHouse} /> */}
-                                소셜
+                                <span>소셜</span>
                             </Link>
                         </li>
                         <li
@@ -48,10 +47,9 @@ const Header = () => {
                                     : ""
                             }
                         >
-                            <div className='on-action'></div>
                             <Link to="/blog">
                                 {/* <FontAwesomeIcon icon={faHouse} /> */}
-                                블로그
+                                <span>블로그</span>
                             </Link>
                         </li>
                     </ul>
