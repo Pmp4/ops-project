@@ -1,4 +1,4 @@
-import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
+import { faCircleHalfStroke, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Search from 'components/search/Search';
 import Logo from "img/logo.svg";
@@ -20,7 +20,7 @@ const Header = () => {
                         <img src={Logo} alt="logo" />
                     </Link>
                 </div>
-                <div className="menu md-font">
+                <div className="menu">
                     <ul className="flex-wrap">
                         <li className={location.pathname === "/" ? "on" : ""}>
                             <Link to="/">
@@ -58,7 +58,9 @@ const Header = () => {
                     <button type="button" className="mode-btn func-btn br-m">
                         <FontAwesomeIcon icon={faCircleHalfStroke} />
                     </button>
-                    <Search parent={"HEADER"}/>
+                    <button type="button" className="search-btn func-btn br-m">
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
                     <button type="button" className="user-btn func-btn br-m box-md">
                         로그인
                     </button>

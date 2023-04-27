@@ -6,7 +6,7 @@ const Search = ({ parent }) => {
     const [searchState, setSearchState] = useState(false);
     const refs = useRef([]);
 
-    useEffect(() => {
+    /* useEffect(() => {
         if (parent !== "HEADER") {
             setSearchState(true);
         }
@@ -20,20 +20,19 @@ const Search = ({ parent }) => {
             }
         },
         [parent]
-    );
+    ); */
 
     return (
         <div
             id="search"
-            onMouseOver={(event) => onClickSearchEvent(true)}
+            // onMouseOver={(event) => onClickSearchEvent(true)}
         >
-            <div className={searchState ? "search-part on" : "search-part"}>
+            <div 
+                // className={searchState ? "search-part on" : "search-part"}
+                className="search-part on"
+            >
                 <div
-                    className={
-                        searchState
-                            ? "search-input flex-wrap on"
-                            : "search-input flex-wrap"
-                    }
+                    className="search-input flex-wrap on"
                 >
                     <input 
                         ref={(el) => (refs.current[0] = el)} 
